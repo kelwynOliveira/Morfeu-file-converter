@@ -138,6 +138,8 @@ function getFileType(extension) {
     "tga",
     "xbm",
     "xpm",
+    "heic",
+    "heif",
   ];
   const audioExt = [
     "mp3",
@@ -198,10 +200,59 @@ function getFileType(extension) {
 
 function getOutputOptions(fileType, currentExt) {
   const options = {
-    image: ["png", "jpg", "jpeg", "webp", "gif", "bmp", "tiff", "ico"],
-    audio: ["mp3", "wav", "ogg", "aac", "flac", "m4a"],
-    video: ["mp4", "mov", "avi", "mkv", "webm", "mp3", "wav", "ogg", "aac"],
-    spreadsheet: ["csv", "xls", "xlsx", "ods", "json", "html", "xml"],
+    image: [
+      "png",
+      "jpg",
+      "jpeg",
+      "webp",
+      "gif",
+      "bmp",
+      "tiff",
+      "ico",
+      "heic",
+      "heif",
+    ],
+    audio: [
+      "mp3",
+      "wav",
+      "m4a",
+      "flac",
+      "ogg",
+      "aac",
+      "wma",
+      "ac3",
+      "aiff",
+      "amr",
+    ],
+    video: [
+      "mp4",
+      "avi",
+      "mkv",
+      "mov",
+      "webm",
+      "flv",
+      "wmv",
+      "mpeg",
+      "mpg",
+      "3gp",
+      "ogv",
+      "vob",
+      "ts",
+      "m2ts",
+      "asf",
+      "swf",
+    ],
+    spreadsheet: [
+      "csv",
+      "xls",
+      "xlsx",
+      "json",
+      "xml",
+      "html",
+      "parquet",
+      "feather",
+      "hdf5",
+    ],
   };
 
   return (options[fileType] || []).filter((ext) => ext !== currentExt);

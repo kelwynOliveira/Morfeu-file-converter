@@ -2,7 +2,7 @@
 function get_api_url(file_type) {
   const API_URL_IMAGE = "http://192.168.1.100:3000/convert_image/";
   const API_URL_SPREADSHEET = "http://192.168.1.100:3001/convert_spreadsheet/";
-  const API_URL_MIDIA = "http://192.168.1.100:3002/convert_midia/";
+  const API_URL_MIDIA = "http://192.168.1.100:3002/convert_media/";
 
   if (file_type === "image") return API_URL_IMAGE;
   else if (file_type === "video" || file_type === "audio") return API_URL_MIDIA;

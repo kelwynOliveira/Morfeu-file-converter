@@ -1,0 +1,20 @@
+services:
+  morfeu:
+    container_name: morfeu
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.morfeu.rule=Host(`morfeu.like`)"
+      - "traefik.http.routers.morfeu.entrypoints=web"
+      - "traefik.http.services.morfeu.loadbalancer.server.port=80"
+    networks:
+      - traefik-net
+    ports:
+      - "2005:80"
+
+networks:
+  traefik-net:
+    external: true

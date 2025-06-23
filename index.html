@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morfeu - Conversor de Arquivos</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <!-- <span class="logo-icon">🔄</span> -->
+          <img style="width: 80px" src="./assets/logo-morfeu.svg" alt="" />
+          <h1>Morfeu</h1>
+        </div>
+        <p class="subtitle">Conversor Universal de Arquivos</p>
+      </header>
+
+      <main class="main-content">
+        <div class="upload-section">
+          <div class="upload-area" id="upload-area">
+            <div class="upload-content">
+              <div class="upload-icon">📁</div>
+              <h3>Arraste seus arquivos aqui</h3>
+              <p>ou clique para selecionar</p>
+              <button
+                class="upload-btn"
+                onclick="document.getElementById('file-input').click()"
+              >
+                Escolher Arquivos
+              </button>
+            </div>
+            <input type="file" id="file-input" multiple style="display: none" />
+          </div>
+        </div>
+
+        <div class="files-section" id="files-section" style="display: none">
+          <div class="section-header">
+            <h2>Arquivos para Conversão</h2>
+            <div class="bulk-actions">
+              <button class="btn btn-primary" onclick="convertAll()">
+                <span class="btn-icon">🚀</span>
+                Converter Todos
+              </button>
+              <button class="btn btn-secondary" onclick="downloadAll()">
+                <span class="btn-icon">📦</span>
+                Baixar ZIP
+              </button>
+            </div>
+          </div>
+
+          <div class="files-grid" id="files-grid">
+            <!-- Arquivos serão inseridos aqui dinamicamente -->
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <!-- <p>Desenvolvido com ❤️ usando tecnologias web modernas</p> -->
+      </footer>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

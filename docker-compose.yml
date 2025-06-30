@@ -14,6 +14,8 @@ services:
       - traefik-net
     ports:
       - "2005:80"
+    volumes:
+      - .:/usr/share/nginx/html
 
 networks:
   traefik-net:

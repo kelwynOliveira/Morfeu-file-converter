@@ -209,8 +209,6 @@ function getOutputOptions(fileType, currentExt) {
       "bmp",
       "tiff",
       "ico",
-      "heic",
-      "heif",
     ],
     audio: [
       "mp3",

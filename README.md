@@ -120,7 +120,7 @@ http://localhost:2005
 ├── scripts.js          # Conversion logic and interactions
 ├── Dockerfile          # NGINX base setup
 ├── docker-compose.yml  # Container configuration
-├── public/assets/      # Logo, favicon, screenshots
+├── assets/             # Logo, favicon, screenshots
 ```
 
 ---
